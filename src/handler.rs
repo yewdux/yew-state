@@ -10,9 +10,9 @@ use std::future::Future;
 use yew::{
     agent::{AgentLink, Bridge, Bridged, HandlerId},
     format::Json,
+    services::{storage::Area, StorageService},
     Callback,
 };
-use yew_services::{storage::Area, StorageService};
 #[cfg(feature = "future")]
 use yewtil::future::LinkFuture;
 
@@ -85,10 +85,10 @@ type HandlerOutput<H> = <H as StateHandler>::Output;
 impl<H: StateHandler> HandlerLink<H> {
     pub(crate) fn new(
         link: impl AgentLinkWrapper<
-            Message = HandlerMsg<H>,
-            Input = HandlerInput<H>,
-            Output = HandlerOutput<H>,
-        > + 'static,
+                Message = HandlerMsg<H>,
+                Input = HandlerInput<H>,
+                Output = HandlerOutput<H>,
+            > + 'static,
     ) -> Self {
         Self {
             link: Rc::new(link),
