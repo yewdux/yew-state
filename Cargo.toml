@@ -1,12 +1,12 @@
 [package]
 name = "yew-state"
-version = "0.5.1"
+version = "0.5.2"
 authors = ["Noah <noah@coronasoftware.net>"]
 edition = "2018"
 license = "MIT"
 repository = "https://github.com/intendednull/yew-state"
 readme = "README.md"
-description = "No longer maintained. Please us Yewdux instead."
+description = "No longer maintained. Please use Yewdux instead."
 keywords = []
 categories = []
 
